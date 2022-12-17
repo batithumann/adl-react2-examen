@@ -1,0 +1,184 @@
+.pizza-galeria {
+  justify-content: center;
+  margin: 2em auto;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: auto;
+}
+
+svg {
+  margin-right:0.4em
+}
+
+.pizza-detalle {
+  justify-content: center;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.pizza-descripcion {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.detalle-ingredientes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pizza-detalle-img  {
+    height: 200px;
+}
+
+.detalle-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detalle-actions p {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .pizza-detalle-img  {
+    height: 300px;
+  }
+  .carrito {
+    padding: 3em;
+  }
+}
+@media (min-width:992px) {
+  .pizza-detalle{
+    flex-direction: row;
+  }
+  .pizza-detalle-img  {
+    margin:3%;
+    width: 50%;
+  }
+  .pizza-descripcion {
+    width: 50%;
+  }
+  .detalle-ingredientes {
+    display: block;
+  }
+}
+
+.pizza-detalle-img img {
+  width: 100%;
+}
+
+.card-title, .capitalize {
+  text-transform: capitalize;
+}
+
+.ingredientes li {
+  list-style: none;
+  text-transform: capitalize;
+}
+.ingredientes li::before {
+  margin-right: 0.3em;
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-image: url('/public/pizza.svg');
+  background-size: contain;
+  vertical-align: middle;
+}
+.price {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 500;
+}
+.price::before {
+  content:"$";
+}
+
+.ver-mas::after {
+  content: '';
+  display: inline-block;
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: 0.2em;
+  background-image: url('/public/eyes.svg');
+  background-size:contain;
+  vertical-align: middle;
+}
+
+.actions {
+  justify-content: center;
+  margin: 0 auto 1em;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: auto auto;
+}
+
+@media (min-width: 768px) {
+  .pizza-galeria {
+    margin: 2em auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto  ;
+  }
+}
+
+@media (min-width: 992px) {
+  .pizza-galeria {
+    margin: 2em auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto auto ;
+  }
+}
+
+@media (min-width:1400px) {
+  .pizza-galeria {
+    margin: 2em auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.carrito {
+  padding: 0.5em;
+}
+
+td {
+  text-transform: capitalize;
+  vertical-align: middle;
+
+
+}
+
+td img {
+  height: 2em;
+}
+
+tr {
+  border-bottom: 1px solid gray;
+  vertical-align: middle;
+
+}
+.table-total {
+  text-align: end;
+  padding-right: 1em !important;
+}
+.table-total::before {
+  content: "$";
+}
+.table-button {
+  width: 4em;
+  text-align: center;
+}
+.button-add {
+  text-align: start;
+}
+.button-remove {
+  text-align: end;
+}
