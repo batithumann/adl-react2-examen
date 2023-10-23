@@ -1,3 +1,7 @@
+.navbar-brand {
+  cursor: pointer;
+}
+
 .pizza-galeria {
   justify-content: center;
   margin: 2em auto;
