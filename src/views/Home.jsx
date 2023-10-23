@@ -4,7 +4,7 @@ import Context from "../context";
 import PizzaCard from "../components/PizzaCard";
 
 const Home = () => {
-  const { pizzas, setPizzas } = useContext(Context);
+  const { pizzas } = useContext(Context);
 
   return (
     <Container>

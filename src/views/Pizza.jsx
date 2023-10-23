@@ -1,4 +1,4 @@
-import { Container, Image, Spinner } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Context from "../context";
@@ -8,7 +8,7 @@ const Pizza = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const { pizzas, setPizzas } = useContext(Context);
+  const { pizzas } = useContext(Context);
   const [details, setDetails] = useState({});
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Pizza = () => {
     } else {
       navigate("/");
     }
-  }, [id, pizzas]);
+  }, [id, pizzas, navigate]);
 
   return (
     <Container>

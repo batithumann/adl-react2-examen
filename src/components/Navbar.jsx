@@ -1,14 +1,14 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { Navigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Context from "../context";
 
 export default function Navigation() {
   const navigate = useNavigate();
-  const { cart, setCart, total, setTotal } = useContext(Context);
+  const { total } = useContext(Context);
   return (
     <>
       <Navbar expand="lg" bg="success" variant="dark">
